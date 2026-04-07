@@ -18,34 +18,43 @@
     <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
-    <header class="main-header corner-decor">
-      <span class="rec-badge" aria-hidden="true">REC</span>
+    <header class="header corner-decor">
+      <span class="rec-label" aria-hidden="true">REC</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
-            <button class="header__theme-menu-button header__theme-menu-button_type_light">день</button>
+            <button class="header__theme-menu-button header__theme-menu-button_type_light">
+              день
+            </button>
           </li>
           <li class="header__theme-menu-item">
-            <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto" disabled>авто</button>
+            <button
+              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+              disabled
+            >
+              авто
+            </button>
           </li>
           <li class="header__theme-menu-item">
-            <button class="header__theme-menu-button header__theme-menu-button_type_dark">неон</button>
+            <button class="header__theme-menu-button header__theme-menu-button_type_dark">
+              неон
+            </button>
           </li>
         </ul>
       </nav>
-      <div class="header__content">
+      <div class="header__text">
         <h1 class="main-heading">no focus</h1>
-        <p class="header__description description-decor">
+        <p class="header__subtitle subtitle-decor">
           Что делать, когда не можешь делать ничего<br />
-          Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+          Или почему нам так сложно сконцентрироваться, особенно когда очень
+          надо
         </p>
       </div>
     </header>
 
-    <main class="main-container">
-      <!-- Секция 1: две колонки (заголовок слева, карточки справа) -->
-      <section class="content-block content-block--two-columns">
-        <h2 class="block__title">Почему сосредоточиться так сложно</h2>
+    <main class="content">
+      <section class="section section--two-columns">
+        <h2 class="section__title">Почему сосредоточиться так сложно</h2>
         <div class="cards-wrapper">
           <article class="card">
             <h3 class="card__title title-decor">Многозадачность</h3>
@@ -63,9 +72,8 @@
         </div>
       </section>
 
-      <!-- Секция 2: три колонки -->
-      <section class="content-block content-block--three-columns">
-        <h2 class="block__title">Что снижает концентрацию внимания?</h2>
+      <section class="section section--three-columns">
+        <h2 class="section__title">Что снижает концентрацию внимания?</h2>
         <div class="cards-grid">
           <article class="card">
             <h3 class="card__title title-decor">Многозадачность</h3>
@@ -88,9 +96,8 @@
         </div>
       </section>
 
-      <!-- Секция 3: две колонки -->
-      <section class="content-block content-block--two-columns">
-        <h2 class="block__title">
+      <section class="section section--two-columns">
+        <h2 class="section__title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
         </h2>
         <div class="advice-block">
@@ -131,21 +138,20 @@
         </div>
       </section>
 
-      <!-- Галерея -->
-      <section class="gallery-section">
-        <h2 class="gallery-section__title title-decor">А можно в картинках?</h2>
-        <div class="gallery-grid">
-          <img class="gallery-img gallery-img--wide" src="images/sunset.png" alt="горы на фоне заката" loading="lazy" />
-          <img class="gallery-img gallery-img--tall" src="images/ice-cream.png" alt="мороженое" loading="lazy" />
-          <img class="gallery-img" src="images/tape.png" alt="кассета" loading="lazy" />
-          <img class="gallery-img" src="images/books.png" alt="стопка книг" loading="lazy" />
-          <img class="gallery-img gallery-img--wide" src="images/street.png" alt="улица" loading="lazy" />
+      <section class="gallery">
+        <h2 class="gallery__title title-decor">А можно в картинках?</h2>
+        <div class="gallery__grid">
+          <img class="gallery__image gallery__image--wide" src="images/sunset.png" alt="горы на фоне заката" loading="lazy" />
+          <img class="gallery__image gallery__image--tall" src="images/ice-cream.png" alt="мороженое" loading="lazy" />
+          <img class="gallery__image" src="images/tape.png" alt="кассета" loading="lazy" />
+          <img class="gallery__image" src="images/books.png" alt="стопка книг" loading="lazy" />
+          <img class="gallery__image gallery__image--wide" src="images/street.png" alt="улица" loading="lazy" />
         </div>
       </section>
     </main>
 
-    <footer class="main-footer corner-decor">
-      <h2 class="footer__heading">focus</h2>
+    <footer class="footer corner-decor">
+      <h2 class="footer__title">focus</h2>
     </footer>
   </body>
 </html>
