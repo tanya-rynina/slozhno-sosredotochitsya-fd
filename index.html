@@ -18,8 +18,8 @@
     <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
-    <header class="header corner-decor">
-      <span class="rec-label" aria-hidden="true">REC</span>
+    <header class="main-header corner-decor">
+      <span class="rec-badge" aria-hidden="true">REC</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -42,9 +42,9 @@
           </li>
         </ul>
       </nav>
-      <div class="header__text">
-        <h1 class="main-heading">no focus</h1>
-        <p class="header__subtitle subtitle-decor">
+      <div class="header__content">
+        <h1 class="site-heading">no focus</h1>
+        <p class="header__description description-decor">
           Что делать, когда не можешь делать ничего<br />
           Или почему нам так сложно сконцентрироваться, особенно когда очень
           надо
@@ -52,10 +52,10 @@
       </div>
     </header>
 
-    <main class="content">
-      <section class="section section--two-columns">
-        <h2 class="section__title">Почему сосредоточиться так сложно</h2>
-        <div class="cards-wrapper">
+    <main class="main-container">
+      <section class="section section--reasons">
+        <h2 class="section__heading">Почему сосредоточиться так сложно</h2>
+        <div class="cards-group">
           <article class="card">
             <h3 class="card__title title-decor">Многозадачность</h3>
             <p class="card__text">
@@ -72,8 +72,8 @@
         </div>
       </section>
 
-      <section class="section section--three-columns">
-        <h2 class="section__title">Что снижает концентрацию внимания?</h2>
+      <section class="section section--distractors">
+        <h2 class="section__heading">Что снижает концентрацию внимания?</h2>
         <div class="cards-grid">
           <article class="card">
             <h3 class="card__title title-decor">Многозадачность</h3>
@@ -96,12 +96,12 @@
         </div>
       </section>
 
-      <section class="section section--two-columns">
-        <h2 class="section__title">
+      <section class="section section--advice">
+        <h2 class="section__heading">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
         </h2>
-        <div class="advice-block">
-          <h3 class="advice-block__heading title-decor">5 простых (на самом деле не очень) советов</h3>
+        <div class="advice-container">
+          <h3 class="advice-container__heading title-decor">5 простых (на самом деле не очень) советов</h3>
           <ul class="advice-list">
             <li class="advice-item">
               <h4 class="advice-item__title title-decor">Представьте небо и облака</h4>
@@ -138,20 +138,20 @@
         </div>
       </section>
 
-      <section class="gallery">
-        <h2 class="gallery__title title-decor">А можно в картинках?</h2>
-        <div class="gallery__grid">
-          <img class="gallery__image gallery__image--wide" src="images/sunset.png" alt="горы на фоне заката" loading="lazy" />
-          <img class="gallery__image gallery__image--tall" src="images/ice-cream.png" alt="мороженое" loading="lazy" />
-          <img class="gallery__image" src="images/tape.png" alt="кассета" loading="lazy" />
-          <img class="gallery__image" src="images/books.png" alt="стопка книг" loading="lazy" />
-          <img class="gallery__image gallery__image--wide" src="images/street.png" alt="улица" loading="lazy" />
+      <section class="image-gallery">
+        <h2 class="image-gallery__title title-decor">А можно в картинках?</h2>
+        <div class="image-gallery__grid">
+          <img class="gallery-img gallery-img--wide" src="images/sunset.png" alt="горы на фоне заката" loading="lazy" />
+          <img class="gallery-img gallery-img--tall" src="images/ice-cream.png" alt="мороженое" loading="lazy" />
+          <img class="gallery-img" src="images/tape.png" alt="кассета" loading="lazy" />
+          <img class="gallery-img" src="images/books.png" alt="стопка книг" loading="lazy" />
+          <img class="gallery-img gallery-img--wide" src="images/street.png" alt="улица" loading="lazy" />
         </div>
       </section>
     </main>
 
-    <footer class="footer corner-decor">
-      <h2 class="footer__title">focus</h2>
+    <footer class="main-footer corner-decor">
+      <h2 class="footer__heading">focus</h2>
     </footer>
   </body>
 </html>

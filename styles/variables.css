@@ -1,9 +1,9 @@
 :root {
-  --body-img: url('../images/cover-image-dark.png');
-  --body-bg: #000028;
+  --bg-url: url('../images/cover-image-dark.png');
+  --bg-color: #000028;
   --accent-bg: #ff0070;
   --accent-text: #000028;
-  --text-main: #f1b2ce;
+  --text-color: #f1b2ce;
   --accent-color: #ff0070;
   --title-shadow: #ff0070;
   --title-color: #db00ff;
