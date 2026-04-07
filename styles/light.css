@@ -1,29 +1,30 @@
 :root.theme-light {
-  --bg-url: url('../images/cover-image-light.png');
-  --bg-color: #fff1f7;
-  --accent-bg: #ff8dcb;
-  --accent-text: #353430;
-  --text-color: #353430;
-  --accent-color: #353430;
-  --title-shadow: #ff8dcb;
-  --title-color: #ffc2e6;
-  --border-color: #353430;
-  --border-hover: rgba(53, 52, 48, 0.4);
-  --rec-visible: none;
+  --project-bg-image: none;
+  --project-title-color: #ffc2e6;
+  --project-accent-bg: #ff8dcb;
+  --project-text-color: #353430;
+  --project-bg-page: #fff1f7;
+  --project-button-color: #353430;
+  --project-par-color: #353430;
+  --project-par-main-color: #353430;
+  --project-subtitles-color: #353430;
+  --project-title-main-color: #353430;
+  --project-label-color: transparent;
+  --project-rec-display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-url: url('../images/cover-image-light.png');
-    --bg-color: #fff1f7;
-    --accent-bg: #ff8dcb;
-    --accent-text: #353430;
-    --text-color: #353430;
-    --accent-color: #353430;
-    --title-shadow: #ff8dcb;
-    --title-color: #ffc2e6;
-    --border-color: #353430;
-    --border-hover: rgba(53, 52, 48, 0.4);
-    --rec-visible: none;
+    --project-bg-image: none;
+    --project-title-color: #ffc2e6;
+    --project-accent-bg: #ff8dcb;
+    --project-text-color: #f1b2ce;
+    --project-bg-page: #fff1f7;
+    --project-button-color: #353430;
+    --project-par-main-color: #353430;
+    --project-subtitles-color: #353430;
+    --project-title-main-color: #353430;
+    --project-label-color: transparent;
+    --project-rec-display: none;
   }
 }

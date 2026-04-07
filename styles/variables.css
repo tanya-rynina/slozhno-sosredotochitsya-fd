@@ -1,13 +1,14 @@
 :root {
-  --bg-url: url('../images/cover-image-dark.png');
-  --bg-color: #000028;
-  --accent-bg: #ff0070;
-  --accent-text: #000028;
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
-  --title-shadow: #ff0070;
-  --title-color: #db00ff;
-  --border-color: #ff0070;
-  --border-hover: rgba(255, 0, 112, 0.4);
-  --rec-visible: inline-block;
+  --project-bg-image: url('../images/cover-image-dark.png');
+  --project-title-color: #DB00FF;
+  --project-accent-bg: #FF0070;
+  --project-button-color: #FF0070;
+  --project-text-color: #FF0070;
+  --project-subtitles-color: #000028;
+  --project-bg-page: #000028;
+  --project-par-color: #000028;
+  --project-par-main-color: #F1B2CE;
+  --project-title-main-color: #FF0070;
+  --project-label-color: #FF0070;
+  --project-rec-display: inline-block;
 }
