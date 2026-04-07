@@ -1,5 +1,429 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
+/* Основные стили (уникальные имена классов) */
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--body-bg-color);
+  background-image: var(--body-bg-img);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка и декоративные элементы */
+.main-header {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  position: relative;
+  padding: 10px;
+}
+
+.corner-decor::before,
+.corner-decor::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--border-color);
+  pointer-events: none;
+}
+
+.corner-decor::before {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner-decor::after {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.rec-badge {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  display: var(--rec-visible);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.rec-badge::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  margin-left: 10px;
+}
+
+/* JS-классы (не меняем) */
+.header__theme-menu {
+  justify-self: center;
+  align-self: start;
+  padding-top: 18px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.header__theme-menu-button {
+  padding: 0 13px;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--accent-color);
+  border: 1px solid transparent;
+  height: 26px;
+}
+
+.header__theme-menu-button_active {
+  border-color: var(--border-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--border-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom-color: var(--border-color);
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 71px;
+  padding: 240px 0 92px;
+}
+
+.main-heading {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--title-shadow);
+  line-height: 0.825;
+}
+
+.header__description {
+  align-self: end;
+  width: 100%;
+  max-width: 355px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-right: 10px;
+}
+
+.description-decor {
+  background-color: var(--accent-bg);
+  color: var(--accent-text);
+}
+
+/* Основной контент */
+.main-container {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.block__title {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.cards-wrapper,
+.cards-grid,
+.advice-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.card__text {
+  font-weight: normal;
+}
+
+.accent-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-bg);
+  border: 1px solid transparent;
+}
+
+.accent-link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.accent-link:focus-visible {
+  outline: none;
+  border: 1px solid currentColor;
+}
+
+.title-decor {
+  background-color: var(--accent-bg);
+  color: var(--accent-text);
+}
+
+.advice-block__heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.advice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.advice-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.advice-item__title {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/* Галерея */
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-section__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-areas:
+    "wide wide tall"
+    "small1 small2 tall"
+    "small1 wide2 wide2";
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-img--wide {
+  grid-area: wide;
+}
+
+.gallery-img--tall {
+  grid-area: tall;
+}
+
+.gallery-grid :nth-child(3) { grid-area: small1; }
+.gallery-grid :nth-child(4) { grid-area: small2; }
+.gallery-grid :nth-child(5) { grid-area: wide2; }
+
+/* Футер */
+.main-footer {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+  padding: 0 20px;
+}
+
+.footer__heading {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--main-title-color);
+  text-shadow: 2px 2px 0 var(--title-shadow);
+  line-height: 0.825;
+  text-align: center;
+}
+
+/* ========== Адаптив для планшета (768px) ========== */
+@media (min-width: 768px) {
+  .corner-decor::before {
+    top: 20px;
+    right: 20px;
+  }
+  .corner-decor::after {
+    bottom: 20px;
+    left: 20px;
+  }
+  .rec-badge {
+    top: 20px;
+    right: 29px;
+  }
+  .main-header {
+    padding: 20px;
+  }
+  .header__theme-menu {
+    padding-top: 190px;
+    justify-self: end;
+  }
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .header__content {
+    padding: 148px 0 92px;
+    gap: 128px;
+  }
+  .header__description {
+    max-width: 364px;
+    margin-right: 20px;
+  }
+  .main-container {
+    padding: 60px 20px;
+    gap: 80px;
+  }
+  .content-block--two-columns {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  .content-block--three-columns .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .gallery-section {
+    gap: 20px;
+  }
+  .main-footer {
+    padding: 0 20px;
+  }
+}
+
+/* ========== Адаптив для десктопа (1024px) ========== */
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    padding-top: 18px;
+    justify-self: center;
+  }
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  .header__description {
+    max-width: 491px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .content-block--two-columns {
+    gap: 10px;
+  }
+  .block__title {
+    width: auto;
+  }
+}
+
+/* ========== Адаптив для мобильных (≤375px) ========== */
+@media (max-width: 375px) {
+  .main-header {
+    grid-template-rows: min-content auto;
+  }
+  .header__theme-menu {
+    padding-top: 72px;
+    justify-self: end;
+  }
+  .header__theme-menu-list {
+    flex-direction: column;
+    padding-right: 10px;
+    gap: 12px;
+  }
+  .corner-decor::before {
+    top: 10px;
+    right: 10px;
+  }
+  .corner-decor::after {
+    left: 10px;
+    bottom: 11px;
+  }
+  .rec-badge {
+    top: 11px;
+    right: 18px;
+  }
+  .header__content {
+    padding: 71px 0 76px 10px;
+    gap: 51px;
+  }
+  .main-heading {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 0.81;
+  }
+  .header__description {
+    margin-right: 10px;
+  }
+  .main-container {
+    padding: 40px 10px;
+    gap: 50px;
+  }
+  .content-block--two-columns,
+  .content-block--three-columns .cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery-section {
+    gap: 10px;
+  }
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-footer {
+    grid-template-rows: repeat(3, 1fr) 0.62fr;
+    padding: 0 10px;
+  }
+  .footer__heading {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 0.81;
+  }
 }

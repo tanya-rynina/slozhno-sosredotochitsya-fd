@@ -1,4 +1,13 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --body-bg-img: url('../images/cover-image-dark.png');
+  --body-bg-color: #000028;
+  --accent-bg: #ff0070;
+  --accent-text: #000028;
+  --text-primary: #f1b2ce;
+  --accent-color: #ff0070;
+  --title-shadow: #ff0070;
+  --main-title-color: #db00ff;
+  --border-color: #ff0070;
+  --border-hover: rgba(255, 0, 112, 0.4);
+  --rec-visible: inline-block;
+}
