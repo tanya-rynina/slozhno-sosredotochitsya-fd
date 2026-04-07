@@ -1,28 +1,15 @@
 /* Основные стили проекта */
 .page {
-  position: relative;
+  background-image: var(--project-bg-image);
   background-color: var(--project-bg-page);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-/* Псевдоэлемент для фонового изображения (только в верхней части) */
-.page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: var(--project-bg-image);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
-  pointer-events: none;
 }
 
 .header {
@@ -158,7 +145,6 @@
   padding-top: 60px;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: transparent;
 }
 
 .link-decor {
@@ -319,7 +305,7 @@
   grid-area: street;
 }
 
-/* Футер — без фонового изображения, только цвет */
+/* Футер — перекрывает фон своим цветом */
 .footer {
   position: relative;
   height: 100vh;
