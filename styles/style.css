@@ -15,9 +15,6 @@
 .header {
   height: 100vh;
   min-height: 668px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   display: grid;
   position: relative;
   grid-template-rows: 1fr auto 1fr;
@@ -54,7 +51,7 @@
   top: 20px;
   right: 30px;
   text-transform: uppercase;
-  font-size: 17.2px;
+  font-size: 18px;
 }
 
 .rec-label::after {
@@ -64,7 +61,7 @@
   content: "";
   display: var(--project-rec-display);
   background-color: var(--project-label-color);
-  box-shadow: 0 0 4px 3px var(--project-label-color);
+  box-shadow: 0 0 4px 2px var(--project-label-color);
   margin-inline-start: 10px;
 }
 
@@ -81,8 +78,8 @@
   margin-top: 2px;
 }
 
+/* Убрана фиксированная высота */
 .header__theme-menu-item {
-  height: 24px;
 }
 
 .header__theme-menu-button {
@@ -145,7 +142,6 @@
 .header-decor {
   background-color: var(--project-accent-bg);
   justify-content: end;
-  background-size: cover;
   font-weight: 700;
   line-height: 23.4px;
   font-size: 18px;
@@ -174,6 +170,10 @@
 }
 
 .link-decor:focus {
+  outline: none;
+}
+
+.link-decor:focus-visible {
   outline: 1px solid var(--project-par-main-color);
 }
 
@@ -307,19 +307,15 @@
 .img-sunset {
   grid-area: sunset;
 }
-
 .img-icecream {
   grid-area: icecream;
 }
-
 .img-tape {
   grid-area: tape;
 }
-
 .img-books {
   grid-area: books;
 }
-
 .img-street {
   grid-area: street;
 }
@@ -481,8 +477,6 @@
   .footer {
     margin-top: 40px;
     grid-template-rows: repeat(3, 1fr) 0.5fr;
-    height: 100vh;
-    min-height: 668px;
     justify-content: center;
   }
 

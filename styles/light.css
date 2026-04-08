@@ -1,5 +1,5 @@
 :root.theme-light {
-  --project-bg-image: none;
+  --project-bg-image: url('../images/cover-image-light.png');
   --project-title-color: #FFC2E6;
   --project-accent-bg: #FF8DCB;
   --project-button-color: #353430;
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --project-bg-image: none;
+    --project-bg-image: url('../images/cover-image-light.png');
     --project-title-color: #FFC2E6;
     --project-accent-bg: #FF8DCB;
     --project-button-color: #353430;
