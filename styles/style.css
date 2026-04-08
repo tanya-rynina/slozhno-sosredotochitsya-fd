@@ -1,4 +1,3 @@
-/* Основные стили проекта */
 .page {
   background-image: var(--project-bg-image);
   background-color: var(--project-bg-page);
@@ -7,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace, sans-serif;
+  font-family: "IBM Plex mono", "Courier New", Courier, monospace, sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -93,7 +92,12 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid color-mix(in srgb, var(--project-button-color) 40%, transparent);
+  border: 1px solid;
+  border-color: color-mix(
+    in srgb,
+    var(--project-button-color) 40%,
+    transparent
+  );
 }
 
 .header__theme-menu-button:focus {
@@ -122,7 +126,7 @@
   display: flex;
   align-self: start;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  text-shadow: 4px 4px 0px var(--project-accent-bg);
+  text-shadow: 4px 4px 0 var(--project-accent-bg);
   color: var(--project-title-color);
 }
 
@@ -144,7 +148,6 @@
   margin-top: 5px;
 }
 
-/* основной контент */
 .content-main {
   width: 100%;
   padding-top: 60px;
@@ -154,7 +157,7 @@
 
 .link-decor {
   text-decoration: none;
-  text-shadow: 2px 2px 0px var(--project-accent-bg);
+  text-shadow: 2px 2px 0 var(--project-accent-bg);
   border-radius: 0;
   line-height: 22.4px;
   outline: 1px solid transparent;
@@ -181,7 +184,7 @@
 .section-title,
 .section-subtitle {
   display: inline-block;
-  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace, sans-serif;
+  font-family: "IBM Plex mono", "Courier New", Courier, monospace, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -200,7 +203,7 @@
 
 .section-text {
   color: var(--project-par-main-color);
-  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace, sans-serif;
+  font-family: "IBM Plex mono", "Courier New", Courier, monospace, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
@@ -268,7 +271,6 @@
   font-weight: 400;
 }
 
-/* Галерея */
 .gallery-block {
   padding-top: 80px;
 }
@@ -276,7 +278,7 @@
 .gallery-heading {
   background-color: var(--project-accent-bg);
   color: var(--project-subtitles-color);
-  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace, sans-serif;
+  font-family: "IBM Plex mono", "Courier New", Courier, monospace, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -303,20 +305,23 @@
 .img-sunset {
   grid-area: sunset;
 }
+
 .img-icecream {
   grid-area: icecream;
 }
+
 .img-tape {
   grid-area: tape;
 }
+
 .img-books {
   grid-area: books;
 }
+
 .img-street {
   grid-area: street;
 }
 
-/* Футер */
 .footer {
   position: relative;
   height: 100vh;
@@ -336,7 +341,7 @@
   justify-content: center;
   grid-row-start: 2;
   grid-column-start: 2;
-  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace, sans-serif;
+  font-family: "IBM Plex mono", "Courier New", Courier, monospace, sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 83%;
