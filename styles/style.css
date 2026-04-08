@@ -78,10 +78,6 @@
   margin-top: 2px;
 }
 
-/* Убрана фиксированная высота */
-.header__theme-menu-item {
-}
-
 .header__theme-menu-button {
   padding: 0 13px;
   text-transform: lowercase;
@@ -466,6 +462,10 @@
 
   .gallery-block {
     padding-top: 50px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 10px;
   }
 
   .gallery-grid {
