@@ -1,13 +1,15 @@
+
 :root.theme-light {
+ 
   --project-bg-image: url('../images/cover-image-light.png');
-  --project-bg-page: #fff1f7;
+  --project-title-color: #ffc2e6;
   --project-accent-bg: #ff8dcb;
   --project-button-color: #353430;
   --project-subtitles-color: #353430;
+  --project-bg-page: #fff1f7;
   --project-par-color: #353430;
   --project-par-main-color: #353430;
   --project-title-main-color: #353430;
-  --project-title-color: #ffc2e6;
   --project-label-color: transparent;
   --project-rec-display: none;
 }
@@ -15,14 +17,14 @@
 @media (prefers-color-scheme: light) {
   :root {
     --project-bg-image: url('../images/cover-image-light.png');
-    --project-bg-page: #fff1f7;
+    --project-title-color: #ffc2e6;
     --project-accent-bg: #ff8dcb;
     --project-button-color: #353430;
     --project-subtitles-color: #353430;
+    --project-bg-page: #fff1f7;
     --project-par-color: #353430;
     --project-par-main-color: #353430;
     --project-title-main-color: #353430;
-    --project-title-color: #ffc2e6;
     --project-label-color: transparent;
     --project-rec-display: none;
   }

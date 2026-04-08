@@ -1,13 +1,13 @@
 :root {
   --project-bg-image: url('../images/cover-image-dark.png');
-  --project-bg-page: #000028;
+  --project-title-color: #db00ff;
   --project-accent-bg: #ff0070;
   --project-button-color: #ff0070;
   --project-subtitles-color: #000028;
+  --project-bg-page: #000028;
   --project-par-color: #000028;
   --project-par-main-color: #f1b2ce;
   --project-title-main-color: #ff0070;
-  --project-title-color: #db00ff;
   --project-label-color: #ff0070;
   --project-rec-display: inline-block;
 }
