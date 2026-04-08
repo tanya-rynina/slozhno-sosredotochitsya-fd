@@ -318,6 +318,7 @@
   text-shadow: 2px 2px var(--project-accent-bg);
   line-height: 0.825;
   text-align: center;
+  padding-top: 63px;
 }
 
 /* Адаптив: планшет (768px) */
@@ -397,6 +398,9 @@
   }
   .section-title {
     width: auto;
+  }
+  .footer-heading {
+    padding-top: 63px;
   }
 }
 
