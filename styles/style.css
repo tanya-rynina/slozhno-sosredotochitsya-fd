@@ -16,13 +16,14 @@
   height: 100vh;
   min-height: 668px;
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
   position: relative;
+  grid-template-rows: 1fr auto 1fr;
+  align-items: center;
   padding: 10px;
 }
 
-.decorated-zone::before,
-.decorated-zone::after {
+.decorated-zone::after,
+.decorated-zone::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -77,6 +78,10 @@
   font-size: 18px;
 }
 
+.header__theme-menu-item {
+  /* высота автоматическая */
+}
+
 .header__theme-menu-button {
   padding: 0 13px;
   text-transform: lowercase;
@@ -129,7 +134,7 @@
   margin-right: 10px;
 }
 
-.header-decor {
+.header__title-decoration {
   background-color: var(--project-accent-bg);
   color: var(--project-subtitles-color);
   font-weight: 700;
@@ -145,71 +150,71 @@
   padding-left: 20px;
 }
 
-.link-decor {
+.shadow-correction {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--project-accent-bg);
 }
 
-.link-decor:hover {
+.shadow-correction:hover {
   border-bottom: 1px solid var(--project-par-main-color);
   margin-bottom: -1px;
 }
 
-.link-decor:focus-visible {
+.shadow-correction:focus-visible {
   outline: 1px solid var(--project-par-main-color);
   outline-offset: 1px;
 }
 
-.section-title {
+.main__title {
   color: var(--project-title-main-color);
   width: 100%;
 }
 
-.section-title,
-.section-subtitle {
+.main__title,
+.main__subtitle {
   display: inline-block;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
 }
 
-.section-subtitle {
+.main__subtitle {
   color: var(--project-subtitles-color);
   background-color: var(--project-accent-bg);
 }
 
-.card-item {
+.case-conteiner {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.section-text {
+.main__paragraph {
   color: var(--project-par-main-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
 }
 
-.section-topic {
+.main__topic {
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: 3;
 }
 
-.section-reasons {
+.main_why-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 10px;
 }
 
-.reasons-wrapper {
+.why-conainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.section-distractors {
+.main_what-section {
   padding-top: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -217,7 +222,7 @@
   row-gap: 20px;
 }
 
-.distract-wrapper {
+.explanation-container {
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -226,74 +231,73 @@
   gap: 20px;
 }
 
-.section-problem {
+.main-problem {
   grid-column-start: 1;
   grid-row-start: 1;
 }
 
-.section-advice {
+.main_how-section {
   padding-top: 78px;
   display: grid;
   grid-template-columns: minmax(min-content, 1fr) minmax(0, 2fr);
   column-gap: 10px;
 }
 
-.advice-container {
+.guidline {
   grid-column-start: 2;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.guide-text {
+.title__guide-correction {
   font-weight: 400;
 }
 
 /* Галерея */
-.gallery-block {
+.pictures-exp {
   padding-top: 80px;
-}
-
-.gallery-heading {
-  background-color: var(--project-accent-bg);
-  color: var(--project-subtitles-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23.4px;
-  margin-bottom: 20px;
-}
-
-.gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  grid-template-areas:
-    "sunset sunset icecream"
-    "tape books icecream"
-    "tape street street";
 }
 
-.gallery-img {
+.illustaration {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.img-sunset {
-  grid-area: sunset;
+.pictures-title {
+  background-color: var(--project-accent-bg);
+  color: var(--project-subtitles-color);
+  grid-column: 1 / -1;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin-bottom: 0;
 }
-.img-icecream {
-  grid-area: icecream;
+
+.sunset_picture {
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
-.img-tape {
-  grid-area: tape;
+.street_picture {
+  grid-column: 2 / 4;
+  grid-row: 4;
 }
-.img-books {
-  grid-area: books;
+.tape_picture {
+  grid-column: 1;
+  grid-row: 3 / 5;
 }
-.img-street {
-  grid-area: street;
+.ice-cream_picture {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.books_picture {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 /* Футер */
@@ -310,7 +314,7 @@
   background-color: var(--project-bg-page);
 }
 
-.footer-heading {
+.footer-title {
   grid-row-start: 2;
   grid-column-start: 2;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -354,24 +358,24 @@
     max-width: 364px;
     margin-right: 20px;
   }
-  .section-reasons {
+  .main_why-section {
     column-gap: 20px;
   }
-  .section-distractors {
+  .main_what-section {
     padding-top: 78px;
   }
-  .distract-wrapper {
+  .explanation-container {
     display: flex;
     flex-direction: column;
   }
-  .section-advice {
+  .main_how-section {
     column-gap: 20px;
     padding-top: 79px;
   }
   .footer {
     grid-template-rows: repeat(3, 1fr) 0.62fr;
   }
-  .footer-heading {
+  .footer-title {
     padding-top: 180px;
   }
 }
@@ -390,16 +394,16 @@
     margin-right: 0;
     margin-left: auto;
   }
-  .section-reasons {
+  .main_why-section {
     gap: 10px;
   }
-  .section-advice {
+  .main_how-section {
     gap: 10px;
   }
-  .section-title {
+  .main__title {
     width: auto;
   }
-  .footer-heading {
+  .footer-title {
     padding-top: 63px;
   }
 }
@@ -446,29 +450,30 @@
     padding-right: 10px;
     padding-left: 10px;
   }
-  .section-topic,
-  .section-topic-solution {
+  .main__topic,
+  .main__topic_solution {
     padding-bottom: 19px;
   }
-  .section-distractors {
+  .main_what-section {
     padding-top: 50px;
   }
-  .gallery-block {
+  .pictures-exp {
     padding-top: 50px;
+    gap: 10px;
+    grid-template-columns: 1fr;
   }
-  .gallery-heading {
+  .pictures-title {
     margin-bottom: 10px;
   }
-  .gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .illustaration {
+    grid-column: 1 !important;
+    grid-row: auto !important;
   }
   .footer {
     margin-top: 40px;
     grid-template-rows: repeat(3, 1fr) 0.5fr;
   }
-  .footer-heading {
+  .footer-title {
     padding-top: 95px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
@@ -476,17 +481,17 @@
 
 /* Адаптив для очень узких экранов (до 420px) */
 @media (max-width: 420px) {
-  .section-advice {
+  .main_how-section {
     grid-template-columns: 1fr;
     padding-top: 49px;
   }
-  .advice-container {
+  .guidline {
     grid-column: 1;
   }
-  .section-problem {
+  .main-problem {
     grid-column: 1 / 4;
   }
-  .section-reasons {
+  .main_why-section {
     grid-template-columns: 1fr;
   }
 }
