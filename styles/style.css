@@ -1,4 +1,18 @@
 /* Основные стили проекта */
+:root {
+  --project-bg-image: url('../images/cover-image-dark.png');
+  --project-bg-page: #000028;
+  --project-accent-bg: #ff0070;
+  --project-button-color: #ff0070;
+  --project-subtitles-color: #000028;
+  --project-par-color: #000028;
+  --project-par-main-color: #f1b2ce;
+  --project-title-main-color: #ff0070;
+  --project-title-color: #db00ff;
+  --project-label-color: #ff0070;
+  --project-rec-display: inline-block;
+}
+
 .page {
   background-image: var(--project-bg-image);
   background-color: var(--project-bg-page);
@@ -196,7 +210,8 @@
   line-height: 23.4px;
 }
 
-.main__topic {
+.main__topic,
+.main__topic_solution {
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: 3;
@@ -494,4 +509,50 @@
   .main_why-section {
     grid-template-columns: 1fr;
   }
+}
+
+/* Светлая тема (класс и медиа) */
+:root.theme-light {
+  --project-bg-image: url('../images/cover-image-light.png');
+  --project-bg-page: #fff1f7;
+  --project-accent-bg: #ff8dcb;
+  --project-button-color: #353430;
+  --project-subtitles-color: #353430;
+  --project-par-color: #353430;
+  --project-par-main-color: #353430;
+  --project-title-main-color: #353430;
+  --project-title-color: #ffc2e6;
+  --project-label-color: transparent;
+  --project-rec-display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --project-bg-image: url('../images/cover-image-light.png');
+    --project-bg-page: #fff1f7;
+    --project-accent-bg: #ff8dcb;
+    --project-button-color: #353430;
+    --project-subtitles-color: #353430;
+    --project-par-color: #353430;
+    --project-par-main-color: #353430;
+    --project-title-main-color: #353430;
+    --project-title-color: #ffc2e6;
+    --project-label-color: transparent;
+    --project-rec-display: none;
+  }
+}
+
+/* Тёмная тема (класс) */
+:root.theme-dark {
+  --project-bg-image: url('../images/cover-image-dark.png');
+  --project-bg-page: #000028;
+  --project-accent-bg: #ff0070;
+  --project-button-color: #ff0070;
+  --project-subtitles-color: #000028;
+  --project-par-color: #000028;
+  --project-par-main-color: #f1b2ce;
+  --project-title-main-color: #ff0070;
+  --project-title-color: #db00ff;
+  --project-label-color: #ff0070;
+  --project-rec-display: inline-block;
 }
